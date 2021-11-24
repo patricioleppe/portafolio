@@ -1,0 +1,29 @@
+{%extends 'core/base.html'%}
+
+{%block title%}
+    Portafolio.
+{%endblock%}
+
+{% block background %} {%load static%} {% static 'core/img/portfolio-bg.jpg' %} {%endblock%}
+
+{%block headers%}
+    <h1>Portafolio</h1>
+    <span class="subheading"><h2>Este es mi portafolio, desarrollo aplicaciones en Python</h2></span>
+{%endblock%}
+
+{%block content%}
+    {% for project in projects %}
+        <div class="row project">  	
+            <div class="col-lg-3 col-md-4 offset-lg-1">
+                <img class="img-fluid img-redonda" src="{{project.image.url}}" alt="" width="200" height='200'>
+            </div>
+            <div class="col-lg-7 col-md-8">
+                <h2 class="section-heading title">{{project.title}}</h2>
+                <p>{{project.description}}</p>
+                {% if project.link %}
+                    <p><a href="{{project.link}}" target="_blank"> Visitar</a></p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+{%endblock%}

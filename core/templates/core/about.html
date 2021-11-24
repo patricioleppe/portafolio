@@ -1,0 +1,29 @@
+{%extends 'core/base.html'%}
+
+{%block title%}
+    Acerca de.
+{%endblock%}
+
+{% block background %} {%load static%} {% static 'core/img/about-bg.jpg' %} {%endblock%}
+
+{%block headers%}
+    <h1>Acerca de</h1>
+    <span class="subheading"><h2>Vivo en Santiago de Chile, Soy desarrollador y amo el desarrollo.</h2></span>
+{%endblock%}
+
+{%block content%}
+<div class="row">
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid avatar" width="80" height="80" src="{% static  'core/img/avatar.jpg' %} " alt="">
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading">Patricio Leppe</h2>   
+        <p>Construyo aplicaciones en Python con Django utilizando base de datos relacionales.</p>
+        <p>Este es mi antiguo portafolio hecho con <a href="https://fathomless-sea-74168.herokuapp.com/"><strong>Flask</strong></a> </p>
+        <p>También tengo experiencia con SQL, PHP, JavaScript.</p>
+    </div>
+</div>
+{%endblock%}
+
+
+
