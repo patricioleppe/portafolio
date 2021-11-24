@@ -1,2 +1,3 @@
-# portafolio
-Portafolio hecho en Django
+# Portafolio Personal
+
+Portafolio hecho con Django.
