@@ -14,10 +14,17 @@ urlpatterns = [
     path('contact/', core_contact.contact, name='contact'),
     path('admin/', admin.site.urls),
 ]
+<<<<<<< HEAD
 handler404 = "core.views.error_404"
+=======
+>>>>>>> 589c48d0be3bb96b111f0586eddfe43ef9c5388a
 
 # para que podamos ver los achivos de imagen de subimos poor le sadministador
 if settings.DEBUG:
     from django.conf.urls.static import static
+<<<<<<< HEAD
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+=======
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+>>>>>>> 589c48d0be3bb96b111f0586eddfe43ef9c5388a

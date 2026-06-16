@@ -127,4 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+<<<<<<< HEAD
 .venv39/
+=======
+>>>>>>> 589c48d0be3bb96b111f0586eddfe43ef9c5388a
