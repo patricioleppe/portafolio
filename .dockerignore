@@ -1,0 +1,4 @@
+# .dockerignore
+*.sqlite3
+.git
+.env

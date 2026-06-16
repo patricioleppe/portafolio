@@ -1,0 +1,98 @@
+{%extends 'core/base.html'%}
+
+{%block title%}
+    Acerca de mi
+{%endblock%}
+
+{% block background %} {%load static%} {% static 'core/img/about-bg.jpg' %} {%endblock%}
+
+{% block headers %}
+    <h1>Acerca de mí</h1>
+    <h5 class="subheading">Desarrollador radicado en Santiago de Chile.</h5>
+      <h5>Trabajo en TI desde 2010, abarcando muchos ámbitos de las tecnologías de la información.</h5>
+<h5>Pero mi verdadera pasión son los fierros de la informática: estar donde ocurren los milagros en el hermoso mundo del desarrollo y la programación.</h5>
+
+<h5>Siempre busco estar en la cresta de la ola, justo ahí donde las papas queman.
+Esta es mi vida frente a un ordenador, lo que me apasiona y amo.</h5>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-3 col-md-4 offset-lg-1 mb-3">
+        <img class="img-fluid avatar" width="80" height="80" src="{% static 'core/img/avatar.jpg' %}" alt="Avatar de Patricio Leppe">
+    </div>
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading">Patricio Leppe</h2>
+        <p>Construí este portafolio autoadministrable con <strong>Django (Python)</strong> y base de datos <strong>PostgreSQL</strong>, desplegado en <strong>Fly.io</strong>.</p>
+
+        <h4>Especialización</h4> <p> Desarrollo Backend con Python, arquitectura de microservicios, integración de inteligencia artificial, AWS Serverless, sistemas distribuidos y automatización de procesos empresariales. </p>
+
+
+
+        <h4>Lenguajes de Programación</h4>
+        <p>
+        Python • JavaScript • TypeScript • PHP • Golang
+        </p>
+
+        <h4>Backend & APIs</h4>
+        <p>
+        FastAPI • Django • Flask • Laravel • Node.js • Odoo 16 • REST APIs • Microservices
+        </p>
+
+        <h4>Frontend</h4>
+        <p>
+        React.js • Redux Toolkit • Material UI • Bootstrap • HTML5 • CSS3 • jQuery
+        </p>
+
+        <h4>Cloud & DevOps</h4>
+        <p>
+        AWS Lambda • Step Functions • EventBridge • DynamoDB • S3 • Secrets Manager • CloudWatch •
+        Docker • Docker Compose • Fly.io • CI/CD
+        </p>
+
+        <h4>Inteligencia Artificial</h4>
+        <p>
+        OpenAI APIs • MCP Servers • FastMCP • RAG • LLMs • AI Agents • Prompt Engineering • Kore.ai
+        </p>
+
+        <h4>Bases de Datos</h4>
+        <p>
+        PostgreSQL • SQL Server • MySQL • MongoDB • SQLite • DynamoDB • Redis
+        </p>
+
+        <h4>Arquitectura y Diseño</h4>
+        <p>
+        Clean Architecture • SOLID • Design Patterns • Domain Driven Design (DDD) • Event Driven Architecture
+        </p>
+
+        <h4>Herramientas</h4>
+        <p>
+        Git • GitHub • GitLab • Jira • VSCode • PyCharm • Linux • Poetry • Pytest • Postman
+        </p>
+
+
+        <h5>También manejo tecnologías clave para proyectos modernos:</h5>
+        <ul>
+            <li><img width="30" height="30" src="{% static 'core/img/apirest.png' %}" alt=""> APIs REST</li>
+            <li><img width="30" height="30" src="{% static 'core/img/git.png' %}" alt=""> Integración continua, Git, GitHub, GitLab</li>
+            <li><img width="30" height="30" src="{% static 'core/img/microservices.png' %}" alt=""> Microservicios</li>
+            <li><img width="30" height="30" src="{% static 'core/img/docker.png' %}" alt=""> Docker</li>
+            <li><img width="30" height="30" src="{% static 'core/img/jira.png' %}" alt=""> Jira</li>
+            <li><img width="30" height="30" src="{% static 'core/img/mint.png' %}" alt=""> Linux Mint</li>
+        </ul>
+
+        <h5>Descargar mi CV:</h5>
+        <ul>
+            <li>
+                <a href="{% static 'cv/cvPatricioAndresLeppeAstorga.pdf' %}" download>
+                    <img width="35" height="30" src="{% static 'core/img/pdf.png' %}" alt="Descargar CV en PDF">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+
+
+

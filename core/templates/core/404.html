@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}
+404 - Página no encontrada
+{% endblock %}
+
+{% block background %}
+{% static 'core/img/contact-bg.jpg' %}
+{% endblock %}
+
+{% block headers %}
+<h1>404</h1>
+<h5 class="subheading">Página no encontrada</h5>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto text-center">
+
+        <h2>Ups... esta página no existe.</h2>
+
+        <p>
+            La URL que intentaste visitar no fue encontrada o ya no está disponible.
+        </p>
+
+        <a class="btn btn-primary mt-3" href="/">
+            Volver al inicio
+        </a>
+
+    </div>
+</div>
+{% endblock %}

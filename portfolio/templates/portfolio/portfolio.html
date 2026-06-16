@@ -1,0 +1,59 @@
+{%extends 'core/base.html'%}
+
+{%block title%}
+    Portafolio.
+{%endblock%}
+
+{% block background %} {%load static%} {% static 'core/img/matrux.jpg' %} {%endblock%}
+
+{%block headers%}
+    <h1>Portafolio</h1>
+
+{%endblock%}
+
+{%block content%}
+
+
+
+    {% comment %} {% for project in projects %} {% endcomment %}
+
+<div class="row project">
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img
+ class="img-fluid img-redonda"
+             src="{% static 'core/img/pokeberries.png' %}"
+             alt="Pokeberries API"
+             width="200"
+             height="200">
+    </div>
+
+    <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">Pokeberries API</h2>
+
+        <p>
+            API REST desarrollada con <strong>FastAPI</strong> para consultar información
+            de Pokémon. Incluye documentación automática mediante Swagger/OpenAPI y
+            despliegue en Fly.io.
+        </p>
+
+        <p>
+            Tecnologías: <strong>Python, FastAPI, Pydantic, PostgreSQL, Fly.io</strong>
+        </p>
+
+        <p>
+            <a href="https://pokeberries-api.fly.dev/docs" target="_blank">
+                📖 Ver documentación
+            </a>
+            |
+            <a href="https://github.com/patricioleppe/pokeberries-api" target="_blank">
+                💻 Ver código fuente
+            </a>
+        </p>
+    </div>
+</div>
+
+<hr>
+
+
+    {% comment %} {% endfor %} {% endcomment %}
+{%endblock%}

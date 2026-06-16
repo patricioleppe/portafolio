@@ -1,0 +1,66 @@
+{%extends 'core/base.html'%}
+
+{%block title%}
+    Contacto.
+{%endblock%}
+
+{% block background %} {%load static%} {% static 'core/img/contact-bg.jpg' %} {%endblock%}
+
+{%block headers%}
+    <h1>Contacto</h1>
+    <span class="subheading">
+        <h5>
+            Puedes escribirme un correo cuando quieras, el formulario de 
+            contacto esta configurado con la Api de <a style="color:white" target="_new" href="https://sendgrid.com">SendGrid</a> me permite recibir 100 correos diarios. 
+            Y asi podremos contactarnos y trabajar juntos
+        </h5>
+    </span>
+
+{%endblock%}
+
+
+{%block content%}
+<div class="row">
+  <div class="col-lg-8 col-md-10 mx-auto">
+    
+          {%if 'ok' in request.GET %}
+              <p style="padding:10px; color:purple; "><b>Su mensaje fue enviado correctamente (y tambien se envio al correo que agregaste), en breve nos pondremos en contacto ;)</b></p>
+          {% endif %}
+
+          
+          {%if 'fail' in request.GET %}
+              <p><b>Ocurrio un error :(</b></p>
+          {% endif %}
+            
+            <form action='' method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>Nombre *</label>
+                    <div class="input-group">
+                        {{form.name}}
+                    </div>
+                    {{form.name.errors}}
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <div class="input-group">
+                      {{form.email}}
+                    </div>
+                    {{form.email.errors}}
+                </div>
+                <div class="form-group">
+                    <label>Mensaje *</label>
+                    <div class="input-group">
+                      {{form.content}}
+                    </div>
+                    {{form.content.errors}}
+                </div>
+                <div class="text-center">
+                    <input type="submit" class="btn btn-primary btn-block py-2" value="Enviar">
+                </div>
+            </form>
+
+
+  </div>
+</div>
+{%endblock%}
